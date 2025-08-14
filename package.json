@@ -1,0 +1,33 @@
+{
+  "name": "kyakuya",
+  "version": "1.0.0",
+  "description": "Kyakuya WhatsApp Bot with ESM plugins system",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Raol Mukarrozi",
+    "email": "raolantidonasi@gmail.com"
+  },
+  "owner": {
+    "name": "Raol Mukarrozi",
+    "phone": ""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@whiskeysockets/baileys": "github:neoxr/baileys",
+    "axios": "^1.11.0",
+    "cheerio": "^1.1.2",
+    "form-data": "^4.0.4",
+    "jimp": "^0.16.13",
+    "node-fetch": "^3.3.2",
+    "pino": "^7.11.0",
+    "qrcode-terminal": "^0.12.0",
+    "qs": "^6.14.0"
+  }
+}
