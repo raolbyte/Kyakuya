@@ -22,6 +22,21 @@ import globalConfig from "./src/settings/config.js"
 import crypto from "crypto"
 import { promisify } from "util"
 
+const nodeVersion = process.versions.node.split(".")[0]
+if (Number.parseInt(nodeVersion) < 20) {
+  console.error("\x1b[31m%s\x1b[0m", "╔════════════════════════════════════════════════════════╗")
+  console.error("\x1b[31m%s\x1b[0m", "║                   ERROR: NODE.JS VERSION               ║")
+  console.error("\x1b[31m%s\x1b[0m", "╚════════════════════════════════════════════════════════╝")
+  console.error("\x1b[31m%s\x1b[0m", `[ERROR] You are using Node.js v${process.versions.node}`)
+  console.error("\x1b[31m%s\x1b[0m", "[ERROR] Kyakuya requires Node.js v20 or higher to run properly")
+  console.error("\x1b[31m%s\x1b[0m", "[ERROR] Please update your Node.js installation and try again")
+  console.error("\x1b[31m%s\x1b[0m", "[ERROR] Visit https://nodejs.org to download the latest version")
+  console.error("\x1b[31m%s\x1b[0m", "╔════════════════════════════════════════════════════════╗")
+  console.error("\x1b[31m%s\x1b[0m", "║                  SHUTTING DOWN...                      ║")
+  console.error("\x1b[31m%s\x1b[0m", "╚════════════════════════════════════════════════════════╝")
+  process.exit(1)
+}
+
 let currentSock = null
 let loginMethod = "qr"
 let rl = null
